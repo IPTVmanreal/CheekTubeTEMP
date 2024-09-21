@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheekTube</title>
+</head>
+<body>
+    <iframe id="cheekvideo" style="width:100%; height:500px;"></iframe>
+
+    <script>
+        async function loadIframeWithCustomUserAgent(url) {
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'User-Agent': 'Android Vinebre Software'
+                    }
+                });
+                const text = await response.text();
+                const iframe = document.getElementById('cheekvideo');
+                iframe.srcdoc = text;
+            } catch (error) {
+                console.error('Video Loading Failed', error);
+            }
+        }
+
+        loadIframeWithCustomUserAgent('http://video.e-droid.net/files_busc/v2422825_2773092739.mp4?ida=3298150');
+    </script>
+</body>
+</html>
+

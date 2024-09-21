@@ -15,6 +15,7 @@
                     method: 'GET',
                     headers: {
                         'User-Agent': 'Android Vinebre Software'
+                        'Host' : 'video.e-droid.net'
                     }
                 });
                 const text = await response.text();
@@ -25,7 +26,7 @@
             }
         }
 
-        loadIframeWithCustomUserAgent('http://video.e-droid.net/files_busc/v2422825_2773092739.mp4?ida=3298150');
+        loadIframeWithCustomUserAgent('https://video.e-droid.net/files_busc/v2422825_2773092739.mp4?ida=3298150');
     </script>
 </body>
 </html>
